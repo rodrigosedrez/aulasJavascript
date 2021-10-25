@@ -7,11 +7,19 @@
     <title>Document</title>
     <style>
         #dv1{
-            width: 100px;
-            height: 100px;
-            border: 2px solid #000;
+            width: 300px;
+            height: 300px;
+            border: 2px solid;
+            border-color:rgb(3, 3, 3);
             background-color: #FFF;
+            border-radius:30px;
+
         }
+        button hover{
+            background-color:black
+        }
+       
+        
     </style>
     <script>
         function mudaCor(){
@@ -20,20 +28,34 @@
             var g=Math.floor(Math.random()*255)
             var b=Math.floor(Math.random()*255)
             obj.style.backgroundColor="rgb("+r+","+g+","+b+")" 
-                      
+        
+        }
+    
+        //
+        //var temp=setTimeout(mudaCor,1000) chama uma vez só 
+        function iniciar(){
+            var tmp=setInterval(mudaCor,1000);
+        }
+        function pa(){
+            clearInterval(tmp)
+        }
+        function eventos(){
+            document.getElementById("dv1").addEventListener("click",iniciar)
+            document.getElementById("bt1").addEventListener("click",pa)
+            document.getElementById("bt22").addEventListener("click",pa)
 
         }
-        window.addEventListener("load",mudaCor)
-
-
+        
+        window.addEventListener("load",eventos)
     </script>
 </head>
 <body>
-    <div id="dv1"></div>
-    <button id="bt1">Iniciar</button>
-    <button id="bt2">Parar</button>
+    <center><h1>
+    <div id="dv1"></div><br>
+    <button  id="bt1">Iniciar</button>
+    <button  id="bt22">Parar</button>
 
-    
+</h1></center>
     
 </body>
 </html>
