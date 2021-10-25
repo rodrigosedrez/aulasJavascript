@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>
+            <script>
+                // fazer uma contagem regressiva para promoção
+                var dt=new Date()
+                var diase=dt.getDay()
+                var dia=dt.getDate()
+                var mes=dt.getMonth()
+                var ano=dt.getFullYear()
+                var seg=dt.getSeconds()
+                var min=dt.getMinutes()
+                var hor=dt.getHours()
+
+                var meses=new Array("Janeiro","Fevereiro","Março","Abril","Maio","Junho","julho","Agosto","Setembro","Outubro","Novembro","Dezembro")
+                var semanas= new Array("Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sabado")
+
+
+                document.write(dia+"/"+(parseInt(mes)+1)+"/"+ano+"<br>")
+
+                document.write(semanas[diase]+" "+dia+" de "+meses[mes]+" de "+ano+"<br>")
+                document.write(hor+":"+min+":"+seg)
+            </script>
+        </h1>
+    </center>
+</body>
+</html>

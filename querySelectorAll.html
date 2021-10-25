@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .titulo{
+            color:rgb(216, 98, 108);
+            font-size: 40px;
+            text-decoration: underline;
+        }
+        div{
+            border: 2px solid rgb(71, 70, 165);
+            padding: 10px;
+            display: inline-block;
+        }
+        a{
+            display: block;
+        }
+        .quadro{
+            background-color: rgb(95, 96, 97);
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <center>
+       <h1 class="titulo">.querySelectorAll</h1>
+       <p>O querySelectorAll() é um método que retrna os elementos do documento que correspondem a uma classe de CSS ou uma tag especificia.</p>
+       <h2 class="titulo">Curso de javascript</h2>
+       <p>www.youtube.com/cfbcursos</p>
+       <p class="titulo">cfbcursos.com.br</p>
+       <div>
+           <p>Este texto está dentro de um div</p>
+           <p>esse também</p>
+       </div>
+       <div class="quadro" id="meio">
+           <p>Este texto está dentro de um div</p>
+           <p>esse também</p>
+       </div>
+       <div>
+           <p>Este texto está dentro de um div</p>
+           <p>esse também</p>
+       </div>
+       <a href="http://www.youtube.com/cfbcursos" target=1_blank>CANAL</a>
+       <a href="http://cfbcursos.com.br">SITE</a>
+       <script>
+           var para=document.querySelectorAll("p")
+           document.write((para[0].innerHTML)+"<br>")
+           para[0].style.color="blue"
+
+           var elemets=document.querySelectorAll("p.titulo")
+           for(var i=0; i<elemets.length; i++){
+               document.write(elemets[i]+"<br>")
+           }
+           var elemets2=document.querySelectorAll("div")
+           for(var i=0;i <elemets.length; i++){
+               elemets2[i].style.color="green"
+           }
+           
+           
+       </script>
+    </center>
+</body>
+</html>
