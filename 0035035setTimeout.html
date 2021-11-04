@@ -15,13 +15,11 @@
             border-radius:30px;
 
         }
-        button hover{
-            background-color:black
-        }
        
         
     </style>
     <script>
+        var tmp;
         function mudaCor(){
             var obj=document.getElementById("dv1")
             var r=Math.floor(Math.random()*255)
@@ -36,13 +34,13 @@
         function iniciar(){
             var tmp=setInterval(mudaCor,1000);
         }
-        function pa(){
+        function para(){git 
             clearInterval(tmp)
         }
         function eventos(){
             document.getElementById("dv1").addEventListener("click",iniciar)
-            document.getElementById("bt1").addEventListener("click",pa)
-            document.getElementById("bt22").addEventListener("click",pa)
+            document.getElementById("bt1").addEventListener("click",iniciar)
+            document.getElementById("bt22").addEventListener("click",para)
 
         }
         
