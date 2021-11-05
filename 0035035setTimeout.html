@@ -26,22 +26,25 @@
             var g=Math.floor(Math.random()*255)
             var b=Math.floor(Math.random()*255)
             obj.style.backgroundColor="rgb("+r+","+g+","+b+")" 
-        
+        // o .floor retorna o valor de x arredondado 255,55 retorna 255 numeros inteiros
         }
     
         //
         //var temp=setTimeout(mudaCor,1000) chama uma vez só 
         function iniciar(){
-            var tmp=setInterval(mudaCor,1000);
+             tmp=setInterval(mudaCor,1000);
         }
         function para(){git 
             clearInterval(tmp)
         }
         function eventos(){
+            /*
             document.getElementById("dv1").addEventListener("click",iniciar)
             document.getElementById("bt1").addEventListener("click",iniciar)
             document.getElementById("bt22").addEventListener("click",para)
-
+            document.getElementById("bt1").addEventListener("click",iniciar)
+            document.getElementById("bt22").addEventListener("click",pa)
+*/
         }
         
         window.addEventListener("load",eventos)

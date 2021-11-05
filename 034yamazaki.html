@@ -22,8 +22,8 @@
         }
         #img1{
             position: absolute;
-            left: 40px;
-            top: 250px;
+            left: 190px;
+            top: 650px;
             
         }
     </style>
@@ -31,29 +31,26 @@
         var px=0
         var py=0
         function move(){
+
         var obj=document.getElementById("img1")
-           var tc=event.keyCode
+        var tc=event.keyCode
            //37=esquerda 38=cima 39=direita 40=baixo
-        if(tc==37){
-            px-=10
-            obj.style.left=px+"px"
-        }else if(tc==38){
-            py-=10
-            obj.style.top=py+"px"
-        }else if(tc==39){
-            px+=10
-            obj.style.left=px+"px"
-        }else if(tc ==40){
-            py+=10
+        if(tc==37){ px-=5; obj.style.left=px+"px"}
+         
+        else if(tc==38){ py-=5; obj.style.top=py+"px"}
+         
+        else if(tc==39){ px+=5;  obj.style.left=px+"px" }
+       
+        else if(tc ==40){
+            py+=5
             obj.style.top=py+"px"
         }else if(tc==90){
-           obj.src = './yama-m.gif'
+           addEventListener("keypress",soco)
             
+        } function soco(){   obj.src = './yama-m.gif'  }
+        
         }
-       
-
-
-        }
+            function Stand(){ obj.src ='./yama-walk.gif' }
 
        document.addEventListener("keydown",move)
         
@@ -75,3 +72,10 @@
     </center>
 </body>
 </html>
+
+
+
+
+
+
+
