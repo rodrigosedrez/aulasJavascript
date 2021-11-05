@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cada{
+            background-color:teal;
+            border: 1px solid rgb(41, 12, 93);
+            width: 300px;
+            height: 300px;
+            
+        }
+    </style>
+    <script>/*
+        function contador(min,max){
+            document.write(min,"<br>")
+            if(min<max){
+               contador(++min,max) 
+            }
+        }
+        contador(0,50)*/
+      
+    </script>
+
+</head>
+<body>
+    <center>
+        <h1><br>
+    <div id="cada"></div>
+        </h1>
+    </center>
+    <script>
+        var obj=document.getElementById("cada")
+        var ang=0
+        var anima
+        function  gira(){
+            obj.style.transform="rotate("+ang+"deg)"
+            ang++
+            if(ang >360){
+                ang=0
+            }
+            anima=requestAnimationFrame(gira)
+        }
+        gira()
+    </script>
+</body>
+</html>

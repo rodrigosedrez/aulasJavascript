@@ -62,8 +62,6 @@
       var anima
       var estado
       var bt
-
-
         function inicia(){
             vel=5
             dx=1
@@ -74,21 +72,18 @@
             jog=document.getElementById("dv1")
             lef()
         }
-
-        function movePara(){
+         function movePara(){
             if(estado){
                 estado=0
                 inicia()
                 bt=document.getElementById("bt1")
-                bt.innerText="Parar"
-                
+                bt.innerText="Parar"  
             }else{
                 estado=1
                 cancelAnimationFrame(anima)
                 bt.innerText="Iniciar"
             }
         }
-
         function lef(){
             px+=(dx*vel)
             jog.style.left=px+"px"
@@ -106,12 +101,8 @@
         
             document.getElementById("bt1").addEventListener("click",movePara)
         }
-
-
-
         window.addEventListener("load",eventos)
-        
-        
+
         function relogio(){
     var data= new Date();
     var hora = data.getHours()
@@ -131,10 +122,7 @@
 
 }
 var tempo=setInterval(relogio,1000)
-</script>
 
-
-    </script>
 </head>
 <body>
     <center>
