@@ -11,7 +11,7 @@
             border-collapse: collapse;
             
             }table,td,tr,th{
-                border: 1px solid #000;
+                border: 2px solid #000;
         }
 
     </style>
@@ -22,13 +22,13 @@
                     <th>Alunos</th><th>Nota 1</th><th>Nota 2</th><th>Resultado</th>
                 </tr>
                 <tr>
-                    <td>Al1</td><td>35</td><td>48</td><td id="n1"></td>
+                    <td>Al1</td><td>22</td><td>48</td><td id="n1"></td>
                 </tr>
                 <tr>
                     <td>Al2</td><td>20</td><td>15</td><td id="n2"></td>
                 </tr>
                 <tr>
-                    <td>Al3</td><td>48</td><td>48</td><td id="n3"></td>
+                    <td>Al3</td><td>49</td><td>49</td><td id="n3"></td>
                 </tr>
                 <tr>
                     <td>Al4</td><td>10</td><td>50</td><td id="n4"></td>
@@ -37,11 +37,13 @@
 
     <script>
          var tabela=document.getElementById("tb")
-        var nota
-         for(var i=0; i<tabela.rows.length;i++){
-            nota=parseFloat(tabala.rows[i].cells[1].innerHTML)+parseFloat(tabala.rows[i].cells[2].innerHTML)
-            tabala.rows[i].cells[3].innerHTML=nota
-        }
+         var nota
+         
+         for (var i=1; i<tabela.rows.length; i++){
+             nota=parseFloat(tabela.rows[i].cells[1].innerHTML)+parseFloat(tabela.rows[i].cells[2].innerHTML)
+             tabela.rows[i].cells[3].innerHTML=nota
+         }
+
         var n=[]
         n[0]=document.getElementById("n1")
         n[1]=document.getElementById("n2")
@@ -54,6 +56,7 @@
                 n[i].style.color="#00f"
             }
         }
+       
         
        
     </script>
