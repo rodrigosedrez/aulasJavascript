@@ -6,12 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .btSlider{
+            background-color: rgba(0,0,0,0.4);
+            height: 30%;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+        }
         #top1{
             width: 1000px;
             height: 300px;
             border: 1px solid #000;
+            background-color: black;
             
-        }          
+            
+        }  
+        #dvbar{
+            width: 1000px;
+            height: 10px;
+            background-color: aqua;
+            
+        }        
     </style>
     <script>
         var imgs=[];
@@ -51,6 +66,12 @@
     </script>
 </head>
 <body>
-    <div id="top1"></div>
+    <div id="top1">
+        <button class="btSlider" id="bt1"><</button>
+        <div id="bvload">
+            <div id="dvbar"></div>
+        </div>
+        <button class="btSlider" id="bt2">></button>
+    </div>
 </body>       
 </html>
