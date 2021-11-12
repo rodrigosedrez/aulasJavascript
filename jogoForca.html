@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <style>
+        #h1title {
+            color:aliceblue;
+            font-size: 60px;
+            
+
+        }
+        body{
+            background-color: rgb(125, 112, 163);
+            background-image: url(./imgForca/forca.png);
+            background-repeat:no-repeat;
+            background-position: 60px top;
+            background-position-y: 100px;
+
+        }
+        #digite{
+            color: rgb(56, 0, 0);
+            line-height: 0.1;
+        }
+        #textinpu{
+            text-align:center;
+        color:rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 66px;
+        background-color:rgb(189, 139, 127);
+        width: 100px;
+        height:70px;
+        position: absolute;
+        left: 60px;
+        top: 60px;
+        }
+        #enterTxt{
+            width: 220px;
+            height: 160px;
+            position:absolute;
+            left: 690px;
+            top: 250px;
+            background-size: cover;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 25px;
+            background:linear-gradient(rgb(235, 198, 151),rgb(161, 33, 33))
+        }
+        #dv1{
+            width: 200px;
+            height: 320px;
+            position:absolute;
+            left: 260px;
+            top: 420px;
+            background-size: cover;
+            background-image: url(./imgForca/enforcado.png);
+            
+        }
+        #dv2{
+            width: 500px;
+            height: 320px;
+            position:absolute;
+            left: 560px;
+            top: 440px;
+            background-size: cover;
+            
+        }
+        #dv3{
+            width: 500px;
+            height: 320px;
+            position:absolute;
+            left: 564px;
+            top: 450px;
+            background-size: cover;
+        }
+        #word{
+            color: black;
+            font-size: 66px;
+            letter-spacing: 10px;
+            line-height: 0.5;
+        }
+        #letra{
+            color: white;
+            font-size: 66px;
+            line-height: 2.1;
+            letter-spacing: 22px;
+        }
+        #line{
+            color: white;
+            font-size: 74px;
+            line-height: 4.7;
+            letter-spacing: 33px;
+        }
+        .enforcado{
+            background-image: url(./imgForca/enforcado.png);
+        }
+        .head{
+            background-image: url(./imgForca/head.png);
+        }
+        .noLegs{
+            background-image: url(./imgForca/no\ legs.png);
+        }
+        .noArms{
+            background-image: url(./imgForca/no\ arm\ and\ legs.png);
+        }
+        #btGo{
+            letter-spacing: 0.1px;
+            color: white;
+            font-size: 65px;
+            width: 120px;
+            height: 160px;
+            position:absolute;
+            left: 930px;
+            top: 250px;
+            background-size: cover;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 25px;
+            background:linear-gradient(rgb(161, 33, 33),rgb(235, 198, 151))
+        }
+        #btGo:hover{
+            border: 3px solid rgb(126, 65, 65);
+            background:linear-gradient(rgb(235, 198, 151),rgb(197, 71, 71))
+        }
+        #btGo:active{
+            background:linear-gradient(rgb(63, 63, 63),rgb(197, 71, 71));
+        }
+
+
+    </style>
+
+    <center>
+        <h1 id="h1title">Jogo da forca</h1></br>
+    </center>
+</head>
+<body>
+    <button id="btGo" onclick="">GO</button>
+    <div id="enterTxt">
+        <center>
+            <h2><p id="digite">Digite uma letra</p></h3>
+            <input type="text" id="textinpu">
+        </center>
+    </div>
+    
+ <div id="dv1"></div>
+ <div id="dv2">
+     <h1> <center>
+         <p id="word"> JOGO DA</p>
+         <p id="letra">FORCA</p>
+         
+        </center>
+     </h1>
+ </div>
+    <div id="dv3">
+        <center>
+            <p id="line">_____</p>
+        </center>
+    </div>
+    <center>
+
+       
+
+
+        <script>
+
+
+
+
+        </script>
+    </center>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação String</title>
+</head>
+<style>
+
+</style>
+<body>
+   <center>
+       <h1>
+           <p id="txt">CFB Cursos </p>
+      
+   <script>
+       var txto=document.getElementById("txt").innerHTML
+
+       var result=txto.search(/aula/i)
+
+       var result2=txto.replace(/curso/,"Rodrigo")
+
+       var result3=txto.charAt(11)
+
+       var result4=txto.charCodeAt(0)
+
+       var txto2= "- curso de Javascript - aula 46 do curso de bla bla bla"
+
+       var res=txto.concat(txto2)
+
+       var res2=txto.concat("- curso de Javascript - aula 46 do curso de bla bla bla")
+
+      // document.write(res+"</br>")
+       //document.write(res2)
+
+      
+
+      document.write(result+"</br>"+result2+"</br>"+result3+"</br>"+result4+"</br>")
+      document.write(String.fromCharCode(result4)+"</br>")
+      document.write(txto+txto2)
+   </script>
+     </h1>
+   </center>
+</body>
+</html>
