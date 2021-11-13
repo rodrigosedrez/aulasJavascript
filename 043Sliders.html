@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #dvslider{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+            
+        }
+    </style>
+    <script>
+        /*
+        background-image: url(./imgs/s1.png);
+        */
+        
+        var imgs=[];
+        var slider;
+        var imgAtual;
+        var maxImg;
+        
+        function preCarregamento(){
+            var s=1
+            for(var i=0; i<5; i++){
+            imgs[i]=new Image();
+            imgs[i].src="imgs/s"+s+".png";
+            s++;
+            }
+        }
+
+        function carregarImg(img){
+            slider.style.backgroudImage="url('"+imgs[img].src+"')"
+
+        }
+
+        function inicia(){
+            preCarregamento();
+            imgAtual=0;
+            maxImg=imgs.length-1
+            slider=document.getElementById("dvslider");
+            carregarImg(imgAtual)
+        }
+
+        window.addEventListener("load", inicia);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+
+        <div id="dvslider"></div>
+</html>
