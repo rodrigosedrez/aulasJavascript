@@ -40,7 +40,7 @@
             width: 220px;
             height: 160px;
             position:absolute;
-            left: 690px;
+            left: 630px;
             top: 250px;
             background-size: cover;
             border: 2px solid rgb(255, 255, 255);
@@ -111,7 +111,7 @@
             width: 120px;
             height: 160px;
             position:absolute;
-            left: 930px;
+            left: 860px;
             top: 250px;
             background-size: cover;
             border: 2px solid rgb(255, 255, 255);
@@ -162,10 +162,24 @@
 
 
         <script>
+            var palavra=[AVEIA,LEITE,CARNE,CARRO,CASA,PRATELEIRA,NOTEBOOK,CELULAR,QUARTO,LIVRO]
+            var linha=document.getElementById("line")
+            var letra=document.getElementById("letra")
+            var resp; 
 
 
 
+            function random(){
+                resp=Math.random(palavra)
+            }
+            function impuletra(){
 
+            }
+            function start(){
+                random()
+            }
+
+            window.addEventListener("load", "olá mundo")
         </script>
     </center>
 </body>
