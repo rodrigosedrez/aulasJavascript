@@ -84,13 +84,13 @@
             color: white;
             font-size: 66px;
             line-height: 2.1;
-            letter-spacing: 22px;
+            letter-spacing: 33px;
         }
         #line{
             color: white;
             font-size: 74px;
             line-height: 4.7;
-            letter-spacing: 33px;
+            letter-spacing: 40px;
         }
         .enforcado{
             background-image: url(./imgForca/enforcado.png);
@@ -129,6 +129,48 @@
 
     </style>
 
+<script>
+    
+    var palavra=["AVEIA","LEITE","CARNE","CARRO","CASA","PRATELEIRA","NOTEBOOK","CELULAR","QUARTO","LIVRO","COMPUTADOR","HEROI",]
+    var palavraSep=[]
+    function rand(palavra){
+        return(palavra[~~(palavra.length * Math.random())])
+    }
+    function forca(){
+        
+
+    }
+    function arrletra(){
+        var arrPalavra= rand(palavra)
+        for(var i=0; i< arrPalavra.length; i++){
+            palavraSep.push(i)
+        }
+    }
+    
+
+    function linhas(){
+        var respp= arrletra()
+        var letras1=document.getElementById("letra").textContent = palavraSep[4]
+        var underline=document.getElementById("line").textContent = '_'.repeat(letras1.length)
+        
+    }/*
+    function entrada(){
+        var lletra=
+        var letr1=document.getElementById("text").innerText
+        letr1.
+
+    }
+*/
+    function start(){
+        linhas()
+        
+        
+        
+    }
+
+    window.addEventListener("load",start)
+</script>
+
     <center>
         <h1 id="h1title">Jogo da forca</h1></br>
     </center>
@@ -145,42 +187,16 @@
  <div id="dv1"></div>
  <div id="dv2">
      <h1> <center>
-         <p id="word"> JOGO DA</p>
-         <p id="letra">FORCA</p>
+         <p id="word"> JOG</p>
+         <p id="letra">0000</p>
          
         </center>
      </h1>
  </div>
     <div id="dv3">
         <center>
-            <p id="line">_____</p>
+            <p id="line">_</p>
         </center>
     </div>
-    <center>
-
-       
-
-
-        <script>
-            var palavra=[AVEIA,LEITE,CARNE,CARRO,CASA,PRATELEIRA,NOTEBOOK,CELULAR,QUARTO,LIVRO]
-            var linha=document.getElementById("line")
-            var letra=document.getElementById("letra")
-            var resp; 
-
-
-
-            function random(){
-                resp=Math.random(palavra)
-            }
-            function impuletra(){
-
-            }
-            function start(){
-                random()
-            }
-
-            window.addEventListener("load", "olá mundo")
-        </script>
-    </center>
 </body>
 </html>
