@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
+<<<<<<< HEAD
         #dvslider{
+=======
+        #top1{
+>>>>>>> 8d1094d508396285fc5cea486eef6b11b836d77b
             width: 1000px;
             height: 300px;
             border: 1px solid #000;
             
+<<<<<<< HEAD
         }
+=======
+        }          
+>>>>>>> 8d1094d508396285fc5cea486eef6b11b836d77b
     </style>
     <script>
         /*
@@ -20,7 +28,9 @@
         var slider;
         var imgAtual;
         var maxImg;
+        var tmp
         
+<<<<<<< HEAD
         function preCarregamento(){
             var s=1
             for(var i=0; i<5; i++){
@@ -41,6 +51,33 @@
             maxImg=imgs.length-1
             slider=document.getElementById("dvslider");
             carregarImg(imgAtual)
+=======
+        function preLoad(){
+            var s=1
+            for(var i=0;i<5;i++){
+            imgs[i]=new Image();
+            imgs[i].src="imgs/s"+s+".png";
+            s++
+        }
+            }
+        function loadImg(img){
+            slider.style.backgroundImage = "url('"+imgs[img].src+"')"
+
+        }
+        function start(){
+            preLoad();
+            imgBegin=0;
+            maxImg=imgs.length-1;
+            slider=document.getElementById("top1");
+            loadImg(imgBegin);
+            tmp=setInterval(change,3000)
+        }
+        function change(){
+            imgBegin++;
+            if (imgBegin>maxImg){
+                imgBegin=0
+            } loadImg(imgBegin)
+>>>>>>> 8d1094d508396285fc5cea486eef6b11b836d77b
         }
 
         window.addEventListener("load", inicia);
@@ -48,8 +85,13 @@
     </script>
 </head>
 <body>
+<<<<<<< HEAD
     
 </body>
 
         <div id="dvslider"></div>
+=======
+    <div id="top1"></div>
+</body>       
+>>>>>>> 8d1094d508396285fc5cea486eef6b11b836d77b
 </html>

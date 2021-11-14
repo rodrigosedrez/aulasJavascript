@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h2>
+            <p id="txt">CFB Cursos - Curso de Javascript CFB Rodrigo Moreira Sedrez</p>
+            <script>
+                var txto1=document.getElementById("txt").innerHTML
+
+                var res=txto1.indexOf("C")
+                var res2=txto1.lastIndexOf("B")
+
+                var txto2=txto1
+                var res3=txto2.localeCompare(txto2)
+                var res4=txto1.slice(3,10) // determina o intervalo dos caracteres
+                var res5=txto1.split(" ") // determina o intervalo dos espaços
+                var res6=txto1.substr(37,22)
+                var res7=txto1.toUpperCase()  // oposto de lowercase
+                var res8=txto1.toUpperCase().substr(37,22)
+
+                if (res<0){
+                    document.write("lentra não encontrada"+"</br>")
+                } else {
+                    document.write(res+"</br>"+res2+"</br>")
+                
+
+                }
+
+                if(res3 == 0){
+                    document.write("o texto é o mesmo "+"</br>")
+                } else {
+                    document.write(" tudo diferente"+"</br>")
+                }
+
+
+                document.write(res4+"</br>")
+                document.write(res5[2]+" "+res5[9]+"</br>")
+                document.write(res6+"</br>")
+                document.write(res7+"</br>")
+                document.write(res8+"</br>")
+                
+
+                
+            </script>
+        </h2>
+    </center>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos</title>
+    <style>
+        #car{
+            width:200px;
+            height: 379px;
+            background-size: cover;
+            overflow: hidden;
+            border: 1px solid #000;
+            
+        }
+        .c1{
+            background-image:url(./imgsCar/C1.png);
+        }
+        .c2{
+            background-image:url(./imgsCar/C2.png)
+        }
+        .c3{
+            background-image:url(./imgsCar/C3.png)
+        }
+
+    </style>
+    <script>
+        
+        function show(c){
+            var obj=document.getElementById("car")
+
+            if (c == 1){
+                obj.setAttribute("class","c1")
+            } 
+            else if(c == 2){
+                obj.setAttribute("class","c2")
+            } 
+            else if(c == 3){
+                obj.setAttribute("class","c3")
+            }  
+        }   
+        function unshow(){
+            var obj=document.getElementById("car")
+
+            obj.removeAttribute("class")
+        }   
+        function check(){
+            var obj=document.getElementById("car")
+            if (obj.hasAttribute("class")){
+                alert("Tem carro na tela")
+            }else {
+                alert("Não tem carro sendo exibido")
+            }
+        }  
+
+    </script>
+</head>
+<body>
+    <center>
+    <button onclick="show(1)" >Car one</button>
+    <button onclick="show(2)" >Car two</button>
+    <button onclick="show(3)" >Car tree</button><br/>
+    
+    <button onclick="unshow()" >clear</button>
+    
+    <div id="car"></div><button onclick="check()" >Check car</button>
+     </center>
+</body>
+</html>
