@@ -7,10 +7,30 @@
     <title>Document</title>
 </head>
 <body>
+    <center>
+    <input type="text" id="text">
+    <button id="btn" onclick="btt()">clique aqui </button>
+    <p id="fff">o texto aparece aqui</p>
     <script>
-        var letras = [casa, carrinho]
+        var palavras=["macaco","aveia","robo","braço"]
 
-        document.write(letras[0])
-    </script>
+        function alea(){
+            const alle=palavras.floor(Math.random()* palavras)
+                return alle;
+        }
+        
+        function btt(){
+            var botao=document.getElementById("text").value.toUpperCase()
+           document.getElementById("fff").textContent = botao
+        }
+        function mostrar(){
+            var alll= ela()
+            const expt1=document.getElementById("fff").value
+            expt1.textContent = alll; 
+
+        }
+        window.addEventListener("load",mostrar)
+       
+    </script></center>
 </body>
 </html>
