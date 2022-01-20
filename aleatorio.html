@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document33</title>
+    <style>
+        .palavraGame{
+            height: 20px;
+            width: 20px;
+        }
+        #enforcado{
+            width: 80px;
+            height: 160px;
+            left: 100px;
+            top: 100px;
+            background-color: blue;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+.jt {
+  position: relative;
+  font-size: 20vmin;
+  font-family: 'Staatliches', sans-serif;
+  text-transform: uppercase;
+  font-display: swap;
+  text-shadow: 0 0 10px tomato;
+}
+
+.jt__row {
+  display: block;
+}
+.jt__row:nth-child(1) {
+  clip-path: polygon(-10% 75%, 110% 75%, 110% 110%, -10% 110%);
+}
+.jt__row:nth-child(2) {
+  clip-path: polygon(-10% 50%, 110% 50%, 110% 75.3%, -10% 75.3%);
+}
+.jt__row:nth-child(3) {
+  clip-path: polygon(-10% 25%, 110% 25%, 110% 50.3%, -10% 50.3%);
+}
+.jt__row:nth-child(4) {
+  clip-path: polygon(-10% 0%, 110% 0%, 110% 25.3%, -10% 25.3%);
+}
+
+.jt__row.jt__row--sibling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+  witdh:800px;
+}
+
+.jt__text {
+  display: block;
+  transform-origin: bottom left;
+  animation: moveIn 2s 0s cubic-bezier(.36,0,.06,1) alternate infinite ;
+}
+.jt__row:nth-child(1) .jt__text {
+  transform: translateY(-0.1em);
+}
+.jt__row:nth-child(2) .jt__text {
+  transform: translateY(-0.3em) scaleY(1.1);
+}
+.jt__row:nth-child(3) .jt__text {
+  transform: translateY(-0.5em) scaleY(1.2) ;
+}
+.jt__row:nth-child(4) .jt__text {
+  transform: translateY(-0.7em) scaleY(1.3) ;
+}
+.jt__row:nth-child(5) .jt__text {
+  transform: translateY(-0.9em) scaleY(1.4) ;
+}
+.jt__row:nth-child(6) .jt__text {
+  transform: translateY(-1.1em) scaleY(1.5) ;
+}
+
+@keyframes moveIn {
+  50%, 100% { 
+    transform: translateY(0em)
+  }
+  0%   { 
+  opacity: 0; 
+  filter: blur(10px);
+  
+  }
+  100% { 
+  opacity: 1; 
+  filter: blur(0px);
+  }
+}
+
+
+
+.debug .jt__row:nth-child(even) {
+  color: black;
+  background: white;
+}
+.debug .jt__row:nth-child(odd) {
+  color: white;
+  background: black;
+}
+
+* { box-sizing: border-box }
+
+html, body {
+  margin: 0;
+  background: black;
+  color: tomato;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+        
+    </style>
+    <script>
+        var pos= Math.round(Math.random()*wordsNum)
+        var palavra= words[pos]
+        var tm=palavra.length
+        var cxLetras=[]
+        var acertos
+        var errosMax= 7
+        var erros= 0
+        var desenhos= []
+        var acertou= false
+        var jogando= false
+    </script>
+</head>
+<body>
+    <center>
+        <h1 class="jt --debug">
+            <span class="jt__row">
+              <span class="jt__text">Jogo da forca</span>
+            </span>
+            <span class="jt__row jt__row--sibling" aria-hidden="true">
+              <span class="jt__text">Jogo da forca</span>
+            </span>
+            <span class="jt__row jt__row--sibling" aria-hidden="true">
+              <span class="jt__text">Jogo da forca</span>
+            </span>
+            <span class="jt__row jt__row--sibling" aria-hidden="true">
+              <span class="jt__text">Jogo da forca</span>
+            </span>
+          </h1>
+        <h1>JOGO DA VELHA</h1>
+        <div id="letras">
+            <input type="text" id="palavra0" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra1" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra2" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra3" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra4" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra5" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra6" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra7" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra8" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra9" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra10" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra11" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra12" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra13" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra14" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra15" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra16" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra17" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra18" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra19" class="palavraGame" maxlength="1">
+            <input type="text" id="palavra20" class="palavraGame" maxlength="1">
+        </div>
+        <div>
+            <input type="text" id="palavraJ" class="palavraGame" maxlength="1" ><br>
+            <button id="play">jogar</button>
+            <button id="btJog">novo jogo</button>
+            <button id="dc">dica</button>
+        </div>
+       
+    </center> <div id="enforcado">
+
+        </div>
+</body>
+</html>
