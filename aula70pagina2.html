@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>function inicia(){
+        var texto1=document.getElementById("local")
+        texto1.innerHTML=localStorage.nome
+        texto1.style.fontSize="44px"
+        
+        var nom=document.getElementById("loca2")
+        nom.innerHTML=sessionStorage.nome2
+        
+    }
+    window.addEventListener("load",inicia)
+</script>
+    </script>
+</head>
+<body>
+    <center>
+        <h1 id="pg1">
+            <a href="./aula70.html">
+            Local Storage</a></h1>
+        <p>pagina 2</p>
+        <p id="local"></p>
+        <p id="loca2"></p>
+    </center>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     #fconfig{
+         position: absolute;
+         top: auto;
+         left: 0;
+         border: 1px solid #000;
+         background-color: darkgray;
+         padding: 20px;
+         border-radius: 20px;
+         display: none;
+     }
+</style>
+<script>
+    var fcorF,vcort,vnome,vnome2
+    function  inicia() {
+        if(localStorage.nome){
+            vcorf=localStorage.corf
+            vcort=localStorage.cort
+            vnome=localStorage.nome
+            defineCor(1,vcorf)
+            defineCor(0,vcort)
+            document.getElementById("painel").innerHTML="Bem vindo'a' "+vnome+"<hr>"
+            document.getElementById("btn2").addEventListener("click", function(){
+                pagina(2)
+            })
+            document.getElementById("btn3").addEventListener("click", function(){
+                pagina(3)
+            })
+        }
+    }
+    function pagina(pg){
+        sessionStorage.nome=document.getElementById("fnome").value
+        window.location.assign("aula70pagina"+pg+".html")
+    }
+
+    function gravar() {
+        var nf=document.getElementById("fconfig")
+        vnome=document.getElementById("fnome").value
+        vnome2=document.getElementById("fnome").value
+        localStorage.corf=vcorf
+        localStorage.cort=vcort
+        localStorage.nome=vnome
+        nf.style.display="none"
+        sessionStorage.nome2=vnome2+" Sedrez"
+        if(nome2=="undefined"){
+            vnome2.innerHTML.style.display="none"
+        }
+        
+    }
+    function mostraConfig(){
+        var form=document.getElementById("fconfig")
+        form.style.display="block"
+    }
+
+    if(typeof(Storage)!="undefined"){
+        if(localStorage.visitas){
+        localStorage.visitas=Number(localStorage.visitas)+1
+    }else{
+        localStorage.visitas=1
+    }
+    document.write("Vistias: "+localStorage.visitas)
+    }else{
+        document.write("sem suporte a Web Storage! ")
+    }
+    function defineCor(op,cor){
+        if(op==1){
+            document.body.style.backgroundColor=cor
+            vcorf=cor
+        }else{
+            document.body.style.color=cor
+            vcort=cor
+        }
+    }
+    window.addEventListener("load",inicia)
+</script>
+<body>
+    <p id="painel"></p>
+    <input type="button" id="onfig" onclick="mostraConfig()" value="Config">
+    <center>
+    <h1>Local Storage</h1>
+    <button id="btn2">PAGINA2</button>
+    <button id="btn3">PAGINA3</button>
+
+    <form action="" nome="fconfig" id="fconfig">
+        <label for="">Nomes:</label><br>
+        <input type="text" nome="fnome" id="fnome" size="20"><br><br>
+        <label>COR FUNDO:</label><br>
+        <input type="radio" nome="fcorF" onclick="defineCor(1,'#f00')">vermelho<br>
+        <input type="radio" nome="fcorF" onclick="defineCor(1,'#000')">Preto<br>
+        <input type="radio" nome="fcorF" onclick="defineCor(1,'#fff')">Branco<br>
+        <input type="radio" nome="fcorF" onclick="defineCor(1,'#0f0')">verde<br>
+        <input type="radio" nome="fcorF" onclick="defineCor(1,'#00f')">azul<br><BR></BR>
+        <label>COR TEXTO</label><br>
+        <input type="radio" nome="fcorT" onclick="defineCor(0,'#000')">preto<br>
+        <input type="radio" nome="fcorT" onclick="defineCor(0,'#fff')">branco<br>
+        <input type="button" value="Gravar" onclick="gravar()">
+    </form>
+</center>
+</body>
+</html>
